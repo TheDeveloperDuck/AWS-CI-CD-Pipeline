@@ -2,23 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DuckSpace - CI/CD Website</title>
+    <title>DuckSpace - CI/CD Website UPDATED</title>
     <style>
         body { 
             font-family: Arial, sans-serif; 
             text-align: center; 
             padding: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4CAF50 0%, #2196F3 100%);
             color: white;
         }
-        h1 { color: #FFD700; }
-        .duck { font-size: 80px; margin: 20px; }
+        h1 { color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .duck { 
+            font-size: 100px; 
+            margin: 20px; 
+            animation: bounce 2s infinite; 
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .version { 
+            background: rgba(255,255,255,0.2); 
+            padding: 15px 30px; 
+            border-radius: 10px; 
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .info {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
     <div class="duck">🦆</div>
-    <h1>Welcome to DuckSpace!</h1>
-    <p>This site is deployed automatically via AWS CodePipeline!</p>
-    <p><strong>Version 1.0</strong></p>
+    <h1>🚀 Welcome to DuckSpace!</h1>
+    <p class="info">This site is deployed automatically via AWS CodePipeline!</p>
+    <div class="version"><strong>Version 2.0 - UPDATED VIA CI/CD!</strong></div>
+    <p class="info">✅ Changes pushed to GitHub are automatically deployed to S3!</p>
+    <p class="info">🔄 Pipeline: Source → Build → Deploy</p>
 </body>
 </html>
